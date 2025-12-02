@@ -7,7 +7,7 @@ export function FlexGrowExample() {
             {/* Item 1: flex-grow: 1 */}
             <div className="flex-item item-a">Item A (Grow: 1)</div>
 
-            {/* Item 2: flex-grow: 2 (Gets twice the space of A and C) */}
+            {/* Item 2: flex-grow: 2 (Gets five times space of A and C) */}
             <div className="flex-item item-b">Item B (Grow: 5)</div>
 
             {/* Item 3: flex-grow: 1 */}

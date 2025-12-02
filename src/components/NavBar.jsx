@@ -42,6 +42,7 @@ export function NavBar() {
                         <Button color="inherit" component={Link} to="/binance">Binance</Button>
                         <Button color="inherit" component={Link} to="/grids">Grids</Button>
                         <Button color="inherit" component={Link} to="/flexgrow">Flex Grow</Button>
+                        <Button color="inherit" component={Link} to="/flexshrink">Flex Shrink</Button>
                     </Box>
                 </Toolbar>
             </AppBar>

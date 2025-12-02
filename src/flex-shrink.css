@@ -1,0 +1,43 @@
+/* --- 1. FLEX CONTAINER --- */
+.shrink-container {
+    display: flex;
+    flex-direction: row;
+
+    /* 🚨 Set Container Size SMALLER than total item width */
+    width: 300px;
+    border: 2px solid #3f51b5;
+    padding: 10px;
+}
+
+/* --- 2. BASE ITEM STYLING --- */
+.shrink-item {
+    padding: 10px;
+    background-color: #f44336; /* Red background for visibility */
+    color: white;
+    margin: 5px;
+    text-align: center;
+
+    /* 🚨 Set Item Size LARGE: Total of 3 x 200px = 600px, which is double the container size */
+    width: 80vw;
+
+    /* Default is flex-shrink: 1, but we'll define it explicitly below */
+    flex-basis: 80vw; /* Equivalent to setting width, but specific to flex */
+}
+
+/* --- 3. APPLYING flex-shrink RATIOS --- */
+
+.item-x {
+    /* Shrinks 1 part */
+    flex-shrink: 1;
+}
+
+.item-y {
+    /* Shrinks 5 parts (Takes 5x the burden of compression) */
+    flex-shrink: 15;
+    background-color: darkred;
+}
+
+.item-z {
+    /* Shrinks 1 part */
+    flex-shrink: 1;
+}

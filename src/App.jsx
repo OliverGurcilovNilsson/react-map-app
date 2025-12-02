@@ -19,6 +19,7 @@ import BinanceRealTimeData from './pages/BinanceRealTimeData.jsx'; // The provid
 import BinanceRealTimeDataScreen from './pages/BinanceRealTimeDataScreen.jsx'
 import {CssGridsExample} from "./pages/CssGridsExample.jsx";
 import {FlexGrowExample} from "./pages/FlexGrow.jsx";
+import {FlexShrinkExample} from "./pages/FlexShrink.jsx";
 import Brightness4Icon from '@mui/icons-material/Brightness4'; // For the Moon/Dark Mode icon
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 
@@ -43,6 +44,7 @@ function App() {
                         <Route path="/map" element={<MapScreen />} />
                         <Route path="/grids" element={<CssGridsExample/>} />
                         <Route path="/flexgrow" element={<FlexGrowExample/>} />
+                        <Route path="/flexshrink" element={<FlexShrinkExample/>} />
                         {/* 2. 🚨 FIX: Wrap the Binance screen with the data provider */}
                         <Route
                             path="/binance"
