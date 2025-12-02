@@ -1,0 +1,47 @@
+/* --- 1. FLEX CONTAINER --- */
+.flex-container {
+    /* 1a. Activate Flexbox */
+    display: flex;
+
+    /* 1b. Define the main axis (default is row) */
+    flex-direction: row;
+
+    /* 1c. Give it a fixed width to create extra space */
+    width: 600px;
+    border: 2px solid #333;
+    padding: 10px;
+}
+
+/* --- 2. BASE ITEM STYLING --- */
+.flex-item {
+    padding: 20px;
+    background-color: #3f51b5;
+    color: white;
+    margin: 5px;
+    /* * Initial Size: All items start with a small, fixed width.
+     * The flex-grow property then distributes the remaining
+     * space (600px minus the initial widths).
+     */
+    width: 100px;
+    text-align: center;
+}
+
+/* --- 3. APPLYING flex-grow RATIOS --- */
+
+.item-a {
+    /* Gets 1 part of the extra space */
+    flex-grow: 1;
+    background-color: darkgreen;
+}
+
+.item-b {
+    /* Gets 5 parts of the extra space (twice the amount of A and C) */
+    flex-grow: 5;
+    background-color: darkred;
+}
+
+.item-c {
+    /* Gets 1 part of the extra space */
+    flex-grow: 1;
+    background-color: darkgoldenrod;
+}

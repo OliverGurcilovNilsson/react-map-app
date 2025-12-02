@@ -1,0 +1,53 @@
+/* --- 1. THE GRID CONTAINER --- */
+.grid-container {
+    /* 1a. Activate Grid Layout */
+    display: grid;
+
+    /* 1b. Define Column Widths */
+    /* Creates a fixed 200px sidebar and a flexible main content area (1fr) */
+    grid-template-columns: 200px 1fr;
+
+    /* 1c. Define Row Heights */
+    /* Creates a 70px header, auto-sized middle, and 50px footer */
+    grid-template-rows: 70px auto 50px;
+
+    /* 1d. Define the Layout Using Area Names */
+    /* This creates a visual template of your page structure */
+    grid-template-areas:
+        "header header"     /* Header spans both columns */
+        "sidebar main"      /* Sidebar is left, main content is right */
+        "footer footer";    /* Footer spans both columns */
+
+    /* Optional: Basic container sizing */
+    min-height: 80vh;
+    gap: 10px; /* Space between grid items */
+}
+
+/* --- 2. GRID ITEMS PLACEMENT --- */
+
+/* We use the grid-area property to place the items into the named slots */
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main-content {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* --- 3. BASIC STYLING (To make it visible) --- */
+.grid-item {
+    background-color: #3f51b5; /* Primary color */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
